@@ -1,0 +1,165 @@
+:root{
+  --Light-G: #7ed561;
+  --Med-G: #55c57a;
+  --Dark-G: #28b485;
+  --White: #fff;
+
+  --Font-W: 400;
+}
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html{
+  font-size: 62.5%
+}
+body{
+  font-family: 'Lato', sans-serif;
+  font-weight: 40rem;
+  line-height: 1.7;
+  color: #777;
+  padding: 2.5rem;
+  box-sizing: border-box;
+}
+.header{
+  height: 95vh;
+  background-image:
+  linear-gradient(to right,
+  rgba(126, 213, 97, 0.8),
+  rgba(40, 180, 133, 0.7)),
+  url(img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  position: relative;
+}
+.logo-box{
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+.logo{
+  height: 4rem;
+}
+.text-box{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.heading-primary{
+  text-transform: uppercase;
+  color: var(--White);
+  backface-visibility: hidden;
+  margin-bottom: 5rem;
+}
+.heading-text{
+  display: block;
+  font-weight: var(--Font-W);
+}
+.heading-main{
+  font-size: 4.8rem;
+  letter-spacing: 3.8rem;
+  animation: moveRight 1s;
+}
+.heading-sub{
+  font-size: 1.6rem;
+  letter-spacing: 1.1rem;
+  animation: moveLeft 1s;
+}
+.btn:link,
+.btn:visited{
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  animation: moveUp 1s;
+}
+.btn:hover{
+  transform: translateY(-.6rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
+.btn:active{
+  transform: translateY(-.1rem);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+}
+.btn-white{
+  background-color: var(--White);
+  color: #777;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ANIMATIONS */
+
+/* Header*/
+@keyframes moveRight {
+0%{
+opacity: 0;
+transform: translateX(-10rem);
+}
+80%{
+transform: translateX(1rem);
+}
+100%{
+opacity: 1;
+transform:translateX(0);
+}
+}
+@keyframes moveLeft {
+0%{
+opacity: 0;
+transform: translateX(10rem);
+}
+80%{
+transform: translateX(-1rem);
+}
+100%{
+opacity: 1;
+transform:translateX(0);
+}
+}
+
+/* Button */
+@keyframes moveUp {
+0%{
+opacity: 0;
+transform: translateY(10rem);
+}
+100%{
+opacity: 1;
+transform: translateY(0);
+}
+}
