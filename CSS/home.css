@@ -5,6 +5,9 @@
   --White: #fff;
 
   --Font-W: 400;
+
+  --margin-buttom: 8rem;
+  --margin-grid: 6rem;
 }
 *,
 *::after,
@@ -93,7 +96,46 @@ body{
   background-color: var(--White);
   color: #777;
 }
+/* section */
 
+.row{
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto;
+}
+.row::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.row:not(:last-child){
+  margin-bottom: var(--margin-buttom);
+}
+[class^="col-"]{
+  background-color: red;
+  float: left;
+}
+[class^="col-"]:not(:last-child){
+  margin-right: var(--margin-grid);
+}
+.col-1-of-2{
+  width: calc((100% - var(--margin-grid)) /2);
+}
+.col-1-of-3{
+  width: calc((100% - 2 * var(--margin-grid))/3);
+}
+.col-2-of-3{
+  width: calc(2*((100% - 2 * var(--margin-grid))/3) + var(--margin-grid));
+}
+.col-1-of-4{
+  width: calc((100% - 3 * var(--margin-grid))/4);
+}
+.col-2-of-4{
+  width: calc(2 *((100% - 3 * var(--margin-grid))/4) + var(--margin-grid));
+}
+.col-3-of-4{
+  width: calc(3 *((100% - 3 * var(--margin-grid))/4) + 2*var(--margin-grid));
+}
 
 
 
