@@ -143,18 +143,51 @@ body{
   color:var(--Med-G);
   border-bottom: 1px solid var(--Med-G);
   padding: 3px;
-  transition: all .2sec;
+  transition: all .2s;
 }
 .no-shake-btn2:active .btn-text{
   color: var(--White);
-  box-shadow: 0 .5rem 1rem rgba(var(--Black),.15);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4 );
   transform: translateY(0);
 }
 .no-shake-btn2:hover .btn-text{
   transform: translateY(-2px);
   background-color: var(--Med-G);
   color: var(--White);
-  box-shadow: 0 1rem 2rem rgba(var(--Black), .15);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .4 );
+}
+.section-images{
+  position: relative;
+}
+.section-image{
+  width: 55%;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .4 );
+  border-radius: 2px;
+  position: absolute;
+  z-index: 0;
+  transition: all .2s;
+  outline-offset: .7rem;
+}
+.section-image-p1{
+    left:0;
+    top: -2rem;
+}
+.section-image-p2{
+    right: 0;
+    top: 2rem;
+}
+.section-image-p3{
+  left: 12%;
+  top: 12rem;
+}
+.section-image:hover{
+  outline: .3rem solid var(--Med-G);
+  z-index: 1;
+  transform: scale(1.5) translateY(-.5rem);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, .5 );
+}
+.section-images:hover .section-image:not(:hover){
+  transform: scale(.95);
 }
 
 
@@ -229,7 +262,7 @@ transform: translateY(0);
 /* My Grid */
 .row{
   max-width: 114rem;
-  background-color: #eee;
+  /* background-color: #eee; */
   margin: 0 auto;
 }
 .row::after{
